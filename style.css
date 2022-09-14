@@ -1,0 +1,231 @@
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+}
+
+h1 {
+  margin: 100px 0 50px 0;
+  line-height: 1;
+  letter-spacing: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 0;
+  padding: 30px 0;
+  background-color: hsl(189, 41%, 97%);
+  width: 750px;
+  border-radius: 20px;
+}
+
+.enter {
+  margin: 0 10px 0 0;
+}
+
+.calculate {
+  position: relative;
+  background-color: hsl(183, 100%, 15%);
+  margin: 0 0 0 10px;
+  border-radius: 8px;
+  padding: 20px;
+  color: hsl(189, 41%, 97%);
+  width: 300px;
+  font-size: 24px;
+}
+
+.calculate p {
+  margin-bottom: 0;
+}
+
+.calculate p + span {
+  font-size: 12px;
+  color: hsl(185, 41%, 84%);
+}
+
+.money {
+  float: right;
+  color: hsl(189, 41%, 97%);
+  font-size: 24px;
+}
+
+.tip-amount,
+.total {
+  margin-bottom: 50px;
+}
+
+.tip-amount p {
+  margin-top: 0;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 16px;
+  gap: 10px;
+}
+
+/* 
+label {
+  display: block;
+} */
+
+input {
+  padding: 10px 10px;
+  /* width: 100%; */
+  text-align: right;
+  background-color: hsl(185, 41%, 84%);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+label {
+  position: relative;
+}
+
+#bill-label:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url(images/icon-dollar.svg) center / contain no-repeat;
+  transform: scale(0.9);
+}
+
+#people-label:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url(images/icon-person.svg) center / contain no-repeat;
+  transform: scale(0.9);
+}
+
+.enter p {
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 4px;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+input {
+  border-radius: 4px;
+}
+
+input:focus {
+  border-color: hsl(172, 67%, 45%);
+  /* border: 50px soild hsl(172, 67%, 45%); */
+}
+
+button {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 6px;
+  color: hsl(0, 0%, 100%);
+  padding: 0.5rem 0;
+  /* font-weight: 300;
+  font-size: 16px; */
+  font: 18px "Space Mono", monospace;
+  font-weight: 300;
+  border: none;
+}
+
+button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+button:focus {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.btn-group :last-child {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(183, 100%, 15%);
+  border: 2px solid hsl(183, 100%, 15%);
+}
+
+/* .enter span {
+  float: right;
+  color: orange;
+  font-size: 16px;
+}
+
+.invisible {
+  visibility: hidden;
+} */
+
+.underneath {
+  position: absolute;
+  top: 10;
+}
+
+.calculate button {
+  width: 100%;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(184, 14%, 56%);
+  font-weight: 400;
+  /* border: none; */
+}
+
+#compute {
+  position: relative;
+  margin: 15px 0 25px 0;
+  margin-bottom: 10px;
+}
+
+#reset {
+  position: relative;
+}
+
+.calculate button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+  body {
+    position: relative;
+    margin: 0;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 25px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .enter{
+    margin-right: 0;
+  }
+
+  .calculate {
+    margin: 1rem 0 0 0;
+    width: 275px;
+  }
+}
